@@ -60,7 +60,7 @@ section .home {
     transition: 100ms ease-in-out;
 }
 
-.logo {
+/* .logo {
     position: absolute;
     top: 16px;
     left: 100px;
@@ -73,8 +73,8 @@ section .home {
 
 .logo a {
     text-decoration: none;
-    color: #000
-}
+    color: #fff;
+} */
 
 /* Underline From Center */
 
@@ -338,16 +338,35 @@ section .home {
 /* Hero */
 
 .home-content {
-    position: relative;
+    margin-top: 2.5rem;
     z-index: 10;
     max-width: 600px;
+    color: #fff;
+    align-self: flex-start;
 }
 
-.home-img {
-    position: absolute;
-    bottom: 0;
+.home-content h1 {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+.video-container {
+    position: fixed;
+    left: 60px;
     right: 0;
-    height: 110%;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    z-index: -1;
 }
 
 /* Services */
@@ -532,19 +551,30 @@ section .home {
 }
 
 @media(max-width: 1068px) {
-    .home-img {
+    /* .home-img {
         display: none;
-    }
+    } 
     .logo {
         top: 10px;
         left: 45px;
         font-size: 1.5rem;
+    }*/
+    .home-content h1 {
+        font-size: 2rem;
     }
-    section {
-        padding: 100px 50px;
+    .home-content h2 {
+        font-size: 1.3rem;
+    }
+    .home-content p {
+        font-size: .9rem;
+    }
+    .home-content {
+        max-width: 450px;
     }
     .navigation {
         left: -100%;
+        padding-top: 10rem;
+        align-items: flex-start;
     }
     .navigation .social-bar {
         left: 0;
@@ -577,6 +607,23 @@ section .home {
 }
 
 @media(max-width: 768px) {
+    section .title {
+        width: 280px;
+        align-self: center;
+    }
+    .home-content {
+        width: 280px;
+        align-self: center;
+    }
+    .video-container {
+        left: 0;
+    }
+    .social-bar {
+        display: none;
+    }
+    .navigation ul li a {
+        font-size: 1.5rem;
+    }
     .services {
         grid-template-columns: 1fr;
     }
