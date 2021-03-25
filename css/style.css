@@ -15,6 +15,7 @@
 html, body {
     font-family: 'Poppins', sans-serif;
     color: #111;
+    background: #fff;
 }
 
 h1 {
@@ -127,7 +128,7 @@ section .home {
     right: 0;
     width: 60px;
     height: 60px;
-    background: var(--primary-color);
+    /* background: var(--primary-color); */
     z-index: 20;
     cursor: pointer;
     transition: 400ms ease-in-out;
@@ -153,7 +154,7 @@ section .home {
     position: absolute;
     height: 5px;
     width: 50%;
-    background: #fff;
+    background: var(--primary-color);
     opacity: 1;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -172,7 +173,7 @@ section .home {
     width: 7.5px;
     height: 7.5px;
     border-radius: 50px;
-    background-color: #fff;
+    background: var(--primary-color);
     border: 0;
     transform: rotate(45deg);
     opacity: 0;
@@ -607,12 +608,13 @@ video {
 }
 
 @media(max-width: 768px) {
+    section {
+        padding: 30px;
+    }
     section .title {
-        width: 280px;
-        align-self: center;
+        align-self: flex-start;
     }
     .home-content {
-        width: 280px;
         align-self: center;
     }
     .video-container {
@@ -626,6 +628,9 @@ video {
     }
     .services {
         grid-template-columns: 1fr;
+    }
+    .contact {
+        width: auto
     }
     .contact-form .row {
         flex-direction: column;
